@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("Checkout") {
+            steps {
+                // Checkout the source code from your version control system (e.g., Git)
+                git "https://github.com/team4canarys/MyShuttle.git"
+            }
+        }
+
+        stage("Build") {
+            steps {
+                // Use Maven to build the Java project
+                sh "mvn clean install"
+            }
+        }
+
+        stage("Test") {
+            steps {
+                // Run tests, if applicable
+                sh "mvn test"
+            }
+        }
+
+        stage("Deploy") {
+            steps {
+                // Additional deployment steps, if needed
+            }
+        }
+    }
+
+    post {
+        success {
+            // Actions to perform when the build is successful
+            echo "Build successful! Deploying..."
+            // Add deployment steps or notifications here
+        }
+        failure {
+            // Actions to perform when the build fails
+            echo "Build failed! Notify the team..."
+            // Add notifications or other failure handling here
+        }
+    }
+}
