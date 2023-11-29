@@ -8,12 +8,6 @@ terraform {
       version = "~> 3.1.0"
     }
   }
-  backend "azurerm" {
-      resource_group_name  = "team4-rg"
-      storage_account_name = "team4storage"
-      container_name       = "team4container"
-      key                  = "terraform.team4container"
-  }
 }
 provider "azurerm" {
   features {}
