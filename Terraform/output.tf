@@ -13,3 +13,6 @@ output "webapp"{
 output "mysql_server"{
   value = azurerm_mysql_flexible_server.mysqlserver.name
 }
+output "mysql_db"{
+  value= azurerm_mysql_flexible_database.mydatabase.name
+}
