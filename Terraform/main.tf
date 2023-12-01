@@ -7,7 +7,7 @@ terraform {
       name = "myshuttleworkspace"
     }
     hostname     = "app.terraform.io"
-    token        = "RU3s0UGVTycp5w.atlasv1.GEy9z38YgXYAJdjp4ndLk28PytlbsG5ZjAZqIzX8ghRnQQR7e2w98oVPan2mgMQuUak"
+    token        = "PwPJHmoV5u8TgQ.atlasv1.9buqmCb9AoUe98XPt6tngQeO3yiZzpMMfpMDqgxTnoGoxdpvNNmifCiQ9s41x7ma7nw"
   }
 
   required_providers {
