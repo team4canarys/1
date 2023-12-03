@@ -1,14 +1,14 @@
 # Set the Azure Provider source and version being used
 terraform {
   required_version = ">= 0.14"
-  backend "remote" {
-    organization = "Canarysteam4"
-    workspaces {
-      name = "myshuttleworkspace"
-    }
-    hostname     = "app.terraform.io"
-    token        = "PwPJHmoV5u8TgQ.atlasv1.9buqmCb9AoUe98XPt6tngQeO3yiZzpMMfpMDqgxTnoGoxdpvNNmifCiQ9s41x7ma7nw"
-  }
+ # backend "remote" {
+   # organization = "Canarysteam4"
+   # workspaces {
+     # name = "myshuttleworkspace"
+  #  }
+   # hostname     = "app.terraform.io"
+   # token        = "PwPJHmoV5u8TgQ.atlasv1.9buqmCb9AoUe98XPt6tngQeO3yiZzpMMfpMDqgxTnoGoxdpvNNmifCiQ9s41x7ma7nw"
+ # }
 
   required_providers {
     azurerm = {
