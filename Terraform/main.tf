@@ -97,7 +97,7 @@ resource "azurerm_linux_web_app" "webapp" {
   connection_string {
     name  = azurerm_mysql_flexible_database.mydatabase.name
     type  = "MySql"
-    value = "jdbc:mysql://${azurerm_mysql_flexible_server.mysqlserver.name}.mysql.database.azure.com/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=${azurerm_mysql_flexible_server.mysqlserver.administrator_login}&password=${azurerm_mysql_flexible_server.mysqlserver.administrator_password}"
+    value = "jdbc:mysql://${azurerm_mysql_flexible_server.mysqlserver.name}.mysql.database.azure.com/MyShuttleDb?useSSL=true&requireSSL=false&autoReconnect=true&user=${azurerm_mysql_flexible_server.mysqlserver.administrator_login}&password=${azurerm_mysql_flexible_server.mysqlserver.administrator_password}"
   }
   depends_on = [ azurerm_service_plan.service_plan, azurerm_resource_group.devopsathon ]
 }
